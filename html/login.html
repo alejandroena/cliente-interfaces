@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Formulario</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="./../js/jquery.min.js"></script>
+  <script src="./../js/bootstrap.min.js"></script>
+  <script src="./../js/jquery.validate.js"></script>
+  <script type="text/javascript" src="./../js/sound-mouseover.js"></script>
+  <script type="text/javascript">
+    $().ready(function () {
+      $("#formulario").validate({
+                debug: true,
+                rules: {
+                    usuario: {
+                        required: true,
+                        minlength: 4
+                    },
+                    correo: {
+                        required: true,
+                        email: true
+                    },
+                   edad: {
+                        digits: true,
+                        min: 12,
+                        max: 99
+                    },
+                    contraseña: {
+                        required: true,
+                        minlength: 6
+                    }
+                }
+            });
+     });
+  </script>
+  <link rel="stylesheet" href="./../css/columnas.css">
+  <link rel="stylesheet" href="./../css/sprite.css">
+    <style type="text/css">
+	
+    .container{
+      height: 100%;
+    } 
+ </style>
+</head>
+<body>
+
+<!--ENCABEZADO-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="https://github.com/alejandroena/clienteInterfaces" target="_blank">Proyecto</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Index</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="listado.html">Listado</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="login.html"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!--CUERPO-->
+<div class="container col-sm-12 text-center">    
+  <div class="row content">
+
+    <!--COLUMNA CENTRAL-->
+    <div class="col-sm-12 text-center"> 
+      <h1>Formulario de registro</h1>
+      <hr />
+      <fieldset>
+      <form id="formulario" action="./login.html"  method="post">
+        Usuario (minimo 4 caracteres)*<br />
+        <input type="text" id="usuario" name="usuario"><br />
+        <br />
+        Direccion de correo electronico*<br />
+        <input type="text" id="correo" name="correo"><br />
+        <br />
+        Edad<br />
+        <input type="number" id="edad" name="edad"><br /><br />
+        <br />
+        Contraseña (minimo 6 caracteres)*<br />
+        <input type="text" id="contraseña" name="contraseña"><br />
+        <br />
+        <input class="submit" type="submit" value="Enviar">
+        <p class="msg">Los campos con * son obligatorios</p>
+      </form>
+      </fieldset>
+
+    </div>
+
+    
+  </div>
+</div>
+
+
+<!--PIE DE PAGINA-->
+<footer class="container-fluid">
+  <audio>
+    <source src="./../sonidos/hover.mp3">
+  </audio>
+  <div id="sounddiv"><bgsound id="sound"></div>
+
+  <ul id="sprite">
+    <li id="panel1"><a href="https://twitter.com/?lang=es" target="_blank" onmouseover="playclip();"></a></li>
+    <li id="panel2"><a href="https://es-es.facebook.com/" target="_blank" onmouseover="playclip();"></a></li>
+    <li id="panel3"><a href="https://plus.google.com/collections/featured?hl=es" target="_blank" onmouseover="playclip();"></a></li>
+    <li id="panel4"><a href="https://www.youtube.com/?gl=ES&hl=es" target="_blank" onmouseover="playclip();"></a></li>
+    <li id="panel5"><a href="#5" onmouseover="playclip();"></a></li>
+  </ul>
+  <p class="hidden-xs">Alejandro Ena Encuentra</p>
+</footer>
+
+</body>
+</html>

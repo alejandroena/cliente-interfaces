@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Galeria</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="./../js/jquery.min.js"></script>
+  <script src="./../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./../js/sound-mouseover.js"></script>
+  <link rel="stylesheet" href="./../css/sprite.css">
+  <link rel="stylesheet" href="./../css/columnas.css">
+</head>
+<body>
+
+<!--ENCABEZADO-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="https://github.com/alejandroena/clienteInterfaces" target="_blank">Proyecto</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Index</a></li>
+        <li class="active"><a href="galeria.html">Galeria</a></li>
+        <li><a href="listado.html">Listado</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> 
+
+<!--CUERPO-->
+<div class="container col-md-10 col-sm-12 text-center">    
+
+    <!--COLUMNA CENTRAL-->
+    <div class="col-xs-12 text-center"> 
+      <h1>Galería de imagenes</h1>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <img src="./../imagenes/Moncayo.jpg" alt="Moncayo" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Moncayo</h3>
+          <p>2314,3m - Zaragoza(Aragón) y Soria(Castilla y León)</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="./../imagenes/pirineos.jpeg" alt="Pirineos" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Pirineos</h3>
+          <p>3404m - España y Francia</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="./../imagenes/sierra-de-gredos.jpg" alt="Sierra de gredos" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Sierra de Gredos</h3>
+          <p>2592m - Ávila , Cáceres, Madrid y Salmanca</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="./../imagenes/teide.jpg" alt="Teide" width="460" height="345">
+        <div class="carousel-caption">
+          <h3>Teide</h3>
+          <p>3718m - Tenerife</p>
+        </div>
+      </div>
+  
+    </div>
+
+    <!-- controles del carousel-->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+      <hr />
+      <h3>Vídeos</h3>
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        <iframe class="video" width="360" height="231"' src="https://www.youtube.com/embed/f9OKL5no-S0" frameborder="0" allowfullscreen ></iframe>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        <iframe class="video" width="360" height="231"' src="https://www.youtube.com/embed/3PyrgGTFp0E" frameborder="0" allowfullscreen ></iframe>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        <video class="video" width="360" height="231" controls="controls">
+          <source src="./../videos/avatar.mp4" type="video/mp4">
+          <source src="./../videos/avatar.avi" type="video/avi">
+          Tu navegador no puede reproducir videos
+        </video>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        <iframe class="video" width="360" height="231"' src="https://www.youtube.com/embed/n9DwoQ7HWvI" frameborder="0" allowfullscreen ></iframe>
+      </div>
+</div>
+
+</div>
+    <!--COLUMNA DERECHA-->
+    <div class="col-md-2 col-sm-12 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+
+
+
+<!--PIE DE PAGINA-->
+<footer class="container-fluid">
+  <audio>
+    <source src="./../sonidos/hover.mp3">
+  </audio>
+  <div id="sounddiv"><bgsound id="sound"></div>
+
+  <ul id="sprite">
+    <li id="panel1"><a href="https://twitter.com/?lang=es" target="_blank" onmouseover="playclip();"></a></li>
+    <li id="panel2"><a href="https://es-es.facebook.com/" target="_blank" onmouseover="playclip();"></a></li>
+    <li id="panel3"><a href="https://plus.google.com/collections/featured?hl=es" target="_blank" onmouseover="playclip();"></a></li>
+    <li id="panel4"><a href="https://www.youtube.com/?gl=ES&hl=es" target="_blank" onmouseover="playclip();"></a></li>
+    <li id="panel5"><a href="#5" onmouseover="playclip();"></a></li>
+  </ul>
+  <p class="hidden-xs">Alejandro Ena Encuentra</p>
+</footer>
+
+</body>
+</html>

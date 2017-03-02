@@ -1,0 +1,53 @@
+#sprite{
+	width: 205px;
+	height: 40px;
+	background: url('./../imagenes/sprite.png');
+	margin: 10px auto;
+	padding:0;
+	position: relative;
+	float:left;
+}
+
+#sprite ul{
+  top:0;
+  position: absolute;
+}
+
+#sprite li{
+	margin: 0; 
+    padding: 0; 
+    list-style: none;
+    position: absolute; 
+    top: 0;
+}
+
+#sprite li, #sprite a{
+	height: 40px;
+	display: block;
+}
+
+#panel1{left: 0; width: 39px;}
+#panel2{left: 40px; width: 40px;}
+#panel3{left: 81px; width: 41px;}
+#panel4{left: 123px; width: 41px;}
+#panel5{left: 165px; width: 40px;}
+
+#panel1 a:hover{
+	background: transparent url('./../imagenes/sprite.png')
+    0 -40px no-repeat;}
+#panel2 a:hover{
+	background: transparent url('./../imagenes/sprite.png')
+    -40px -40px no-repeat;
+}
+#panel3 a:hover{
+	background: transparent url('./../imagenes/sprite.png')
+    -81px -40px no-repeat;
+}
+#panel4 a:hover{
+	background: transparent url('./../imagenes/sprite.png')
+    -123px -40px no-repeat;
+}
+#panel5 a:hover{
+	background: transparent url('./../imagenes/sprite.png')
+    -165px -40px no-repeat;
+}

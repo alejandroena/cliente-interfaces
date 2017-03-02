@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Indice</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="./../js/jquery.min.js"></script>
+  <script src="./../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./../js/sound-mouseover.js"></script>
+  <link rel="stylesheet" href="./../css/columnas.css">
+  <link rel="stylesheet" href="./../css/sprite.css">
+  <style type="text/css">
+    html, body{
+      background-color: white;
+    }
+    .izquierda img{
+       width: 170px;   
+    }
+ </style>
+ <script type="text/javascript">
+   $(document).ready(function(){
+    $("#foto1").mouseover(function(){
+        $(this).animate({height: "110%", width: "90%"});
+    });
+    $("#foto1").mouseout(function(){
+        $(this).animate({height: "100%", width: "80%"});
+    });
+
+    $("#foto2").mouseover(function(){
+        $(this).animate({height: "110%", width: "90%"});
+    });
+    $("#foto2").mouseout(function(){
+        $(this).animate({height: "100%", width: "80%"});
+    });
+
+    $("#foto3").mouseover(function(){
+        $(this).animate({height: "110%", width: "90%"});
+    });
+    $("#foto3").mouseout(function(){
+        $(this).animate({height: "100%", width: "80%"});
+    });
+  });
+ </script>
+</head>
+<body>
+
+<!--ENCABEZADO-->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="https://github.com/alejandroena/clienteInterfaces">Proyecto</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Index</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        
+        <li><a href="listado.html">Listado</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="login.html"><span class="glyphicon glyphicon-user"></span>Registrarse</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--COLUMNA IZQUIERDA-->
+    <div class="col-lg-2 col-md-3 hidden-sm hidden-xs sidenav text-center izquierda">
+    <h2>Calendario</h2>
+      <script language="JavaScript" src="http://www.pekegifs.com/calendarios2/cal005.js" type="text/JavaScript"></script>
+      <br />
+    <h2>Numero de Visitas</h2>
+    <script type="text/javascript" src="https://counter1.fcs.ovh/private/countertab.js?c=f2e429bfa4aff46ad9ce31801a106fcc"></script>
+    </div>
+
+<!--CUERPO-->
+<div class="container col-lg-8 col-md-9 col-sm-12 text-center">    
+  <div class="row content">
+
+    <!--COLUMNA CENTRAL-->
+    <div class="col-sm-12 text-left"> 
+      <h1>Bienvenido</h1>
+      <p>Página realizada para el trabajo de las asignaturas de Cliente y Diseño del curso de Aplicaciones Web</p>
+      <hr>
+      <h3>Contenido</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <div class="row videos">
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        <a href="galeria.html"><img id="foto1" src="./../imagenes/galeria.jpg"></a>
+        <hr />
+        <p>Galeria</p>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        <a href="listado.html"><img id="foto2" src="./../imagenes/listado.jpg"></a>
+        <hr />
+        <p>Listado</p>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        <a href="login.html"><img id="foto3" src="./../imagenes/login.jpg"></a>
+        <hr />
+        <p>Login</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!--COLUMNA DERECHA-->
+    <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12 sidenav">
+      <div class="well">
+        <p>Anuncio</p>
+      </div>
+      <div class="well">
+        <p>Anuncio</p>
+        </div>
+    </div>
+
+<!--PIE DE PAGINA-->
+<footer class="container-fluid">
+  <audio>
+    <source src="./../sonidos/hover.mp3">
+  </audio>
+  <div id="sounddiv"><bgsound id="sound"></div>
+
+  <ul id="sprite">
+    <li id="panel1"><a href="https://twitter.com/?lang=es" target="_blank" onmouseover="playclip();"></a></li>
+    <li id="panel2"><a href="https://es-es.facebook.com/" target="_blank" onmouseover="playclip();"></a></li>
+    <li id="panel3"><a href="https://plus.google.com/collections/featured?hl=es" target="_blank" onmouseover="playclip();"></a></li>
+    <li id="panel4"><a href="https://www.youtube.com/?gl=ES&hl=es" target="_blank" onmouseover="playclip();"></a></li>
+    <li id="panel5"><a href="#5" onmouseover="playclip();"></a></li>
+  </ul>
+  <p class="hidden-xs">Alejandro Ena Encuentra</p>
+</footer>
+
+</body>
+</html>
